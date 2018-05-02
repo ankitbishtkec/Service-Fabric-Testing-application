@@ -1,0 +1,17 @@
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.csproj.CoreCompileInputs.cache
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.AssemblyInfoInputs.cache
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.AssemblyInfo.cs
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\hostpolicy.dll
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\hostfxr.dll
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.exe
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.deps.json
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.runtimeconfig.json
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.runtimeconfig.dev.json
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.dll
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.pdb
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.dll
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.pdb
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.csprojResolveAssemblyReference.cache
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service-Fabric-Test-Model.dll
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service-Fabric-Test-Model.pdb
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.csproj.CopyComplete

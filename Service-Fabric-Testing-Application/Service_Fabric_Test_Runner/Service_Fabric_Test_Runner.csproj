@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.1.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Data" Version="3.0.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.0.456" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.0.456" />
+    <PackageReference Include="Microsoft.UnitTestFramework.Extensions" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestCases\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service-Fabric-Test-Model\Service-Fabric-Test-Model.csproj" />
+  </ItemGroup>
+
+</Project>
