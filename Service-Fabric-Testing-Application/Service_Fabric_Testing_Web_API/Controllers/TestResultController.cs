@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.ServiceFabric.Services.Remoting.Client;
 using Service_Fabric_Test_Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.ServiceFabric.Services.Remoting.V2.FabricTransport.Client;
 
 namespace Service_Fabric_Testing_Web_API.Controllers
 {
@@ -14,17 +15,27 @@ namespace Service_Fabric_Testing_Web_API.Controllers
 
         public TestResultController()
         {
-            _serviceFabricTestRunner = ServiceProxy.Create<IServiceFabricTestRunner>(new Uri("fabric:/Service_Fabric_Testing_Application/Service_Fabric_Test_Runner"), new Microsoft.ServiceFabric.Services.Client.ServicePartitionKey(0));
+            ServiceProxyFactory serviceProxyFactory = new ServiceProxyFactory((c) => new FabricTransportServiceRemotingClientFactory());
+            _serviceFabricTestRunner = serviceProxyFactory.CreateServiceProxy<IServiceFabricTestRunner>(new Uri("fabric:/Service_Fabric_Testing_Application/Service_Fabric_Test_Runner"), new Microsoft.ServiceFabric.Services.Client.ServicePartitionKey(0));
+
+            //_serviceFabricTestRunner = ServiceProxy.Create<IServiceFabricTestRunner>(new Uri("fabric:/Service_Fabric_Testing_Application/Service_Fabric_Test_Runner"), new Microsoft.ServiceFabric.Services.Client.ServicePartitionKey(0));
         }
 
         // GET api/testresult/00000000-0000-0000-0000-000000000000
         [HttpGet("{id}")]
         public async Task<JsonResult> Get(Guid id)
         {
-            JsonResult response;
-            //response.StatusCode = 500;
-            TestResult tr = await _serviceFabricTestRunner.GetTestResult(id);
-            response = new JsonResult(tr);
+            JsonResult response = new JsonResult(null);
+            try
+            {
+                //response.StatusCode = 500;
+                TestResult tr = await _serviceFabricTestRunner.GetTestResult(id);
+                response = new JsonResult(tr);
+            }
+            catch( Exception ex)
+            {
+                response = new JsonResult(ex);
+            }
             return response;
         }
 

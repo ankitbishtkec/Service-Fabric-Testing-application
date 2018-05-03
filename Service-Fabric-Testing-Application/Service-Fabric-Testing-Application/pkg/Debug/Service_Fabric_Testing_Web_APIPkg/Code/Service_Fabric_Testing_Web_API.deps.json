@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.6.1/win7-x64",
-    "signature": "dfa5d1eb38895c6e3437e269c05d2dc7febf8484"
+    "signature": "f43b6c148ca43151876780d335a73db659456811"
   },
   "compilationOptions": {
     "defines": [
@@ -25,10 +25,12 @@
         "dependencies": {
           "Microsoft.AspNetCore": "2.0.2",
           "Microsoft.AspNetCore.Mvc": "2.0.3",
-          "Microsoft.ServiceFabric": "6.1.456",
+          "Microsoft.ServiceFabric": "6.1.480",
           "Microsoft.ServiceFabric.AspNetCore.Kestrel": "3.0.456",
-          "Microsoft.ServiceFabric.Data": "3.0.456",
-          "Microsoft.ServiceFabric.Services": "3.0.456",
+          "Microsoft.ServiceFabric.Data": "3.0.480",
+          "Microsoft.ServiceFabric.Services": "3.0.480",
+          "Microsoft.ServiceFabric.Services.Remoting": "3.0.480",
+          "Microsoft.UnitTestFramework.Extensions": "2.0.0",
           "Service-Fabric-Test-Model": "1.0.0",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
@@ -68,7 +70,7 @@
           "System.ComponentModel.TypeConverter": "4.1.2.0",
           "System.Console.Reference": "4.0.2.0",
           "System.Data.Common": "4.2.0.0",
-          "System.Diagnostics.Contracts": "4.0.1.0",
+          "System.Diagnostics.Contracts.Reference": "4.0.1.0",
           "System.Diagnostics.Debug.Reference": "4.0.11.0",
           "System.Diagnostics.FileVersionInfo.Reference": "4.0.2.0",
           "System.Diagnostics.Process": "4.1.2.0",
@@ -346,7 +348,7 @@
           "System.Data.Common.dll": {}
         }
       },
-      "System.Diagnostics.Contracts/4.0.1.0": {
+      "System.Diagnostics.Contracts.Reference/4.0.1.0": {
         "compile": {
           "System.Diagnostics.Contracts.dll": {}
         }
@@ -1621,7 +1623,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
-      "Microsoft.ServiceFabric/6.1.456": {
+      "Microsoft.ServiceFabric/6.1.480": {
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Internal.Strings.dll": {},
           "ref/netstandard2.0/Microsoft.ServiceFabric.Internal.dll": {},
@@ -1640,7 +1642,7 @@
           "Microsoft.AspNetCore.Http.Features": "2.0.2",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
-          "Microsoft.ServiceFabric.Services": "3.0.456"
+          "Microsoft.ServiceFabric.Services": "3.0.480"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.AspNetCore.dll": {}
@@ -1655,30 +1657,58 @@
           "ref/netstandard2.0/Microsoft.ServiceFabric.AspNetCore.Kestrel.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Data/3.0.456": {
+      "Microsoft.ServiceFabric.Data/3.0.480": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "6.1.456"
+          "Microsoft.ServiceFabric": "6.1.480"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Data.Interfaces.dll": {},
           "ref/netstandard2.0/Microsoft.ServiceFabric.Data.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.456": {
+      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.480": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "6.1.456"
+          "Microsoft.ServiceFabric": "6.1.480"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Diagnostics.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Services/3.0.456": {
+      "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.480": {
         "dependencies": {
-          "Microsoft.ServiceFabric.Data": "3.0.456",
-          "Microsoft.ServiceFabric.Diagnostics.Internal": "3.0.456"
+          "Microsoft.ServiceFabric": "6.1.480"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.V2.dll": {},
+          "ref/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.dll": {}
+        }
+      },
+      "Microsoft.ServiceFabric.Services/3.0.480": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Data": "3.0.480",
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "3.0.480"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Services.dll": {}
+        }
+      },
+      "Microsoft.ServiceFabric.Services.Remoting/3.0.480": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "3.0.480",
+          "Microsoft.ServiceFabric.FabricTransport.Internal": "3.0.480",
+          "Microsoft.ServiceFabric.Services": "3.0.480"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.ServiceFabric.Services.Remoting.dll": {}
+        }
+      },
+      "Microsoft.UnitTestFramework.Extensions/2.0.0": {
+        "dependencies": {
+          "MSTest.TestFramework": "1.1.17",
+          "System.Diagnostics.Contracts": "4.0.1"
+        },
+        "compile": {
+          "lib/net45/Microsoft.UnitTestFramework.Extensions.dll": {}
         }
       },
       "Microsoft.Win32.Registry/4.4.0": {
@@ -1688,6 +1718,12 @@
         },
         "compile": {
           "ref/net461/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "MSTest.TestFramework/1.1.17": {
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {},
+          "lib/net45/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {}
         }
       },
       "NETStandard.Library/2.0.1": {
@@ -1727,6 +1763,7 @@
         }
       },
       "System.Console/4.3.0": {},
+      "System.Diagnostics.Contracts/4.0.1": {},
       "System.Diagnostics.Debug/4.3.0": {},
       "System.Diagnostics.DiagnosticSource/4.4.1": {
         "compile": {
@@ -1840,10 +1877,12 @@
         "dependencies": {
           "Microsoft.AspNetCore": "2.0.2",
           "Microsoft.AspNetCore.Mvc": "2.0.3",
-          "Microsoft.ServiceFabric": "6.1.456",
+          "Microsoft.ServiceFabric": "6.1.480",
           "Microsoft.ServiceFabric.AspNetCore.Kestrel": "3.0.456",
-          "Microsoft.ServiceFabric.Data": "3.0.456",
-          "Microsoft.ServiceFabric.Services": "3.0.456",
+          "Microsoft.ServiceFabric.Data": "3.0.480",
+          "Microsoft.ServiceFabric.Services": "3.0.480",
+          "Microsoft.ServiceFabric.Services.Remoting": "3.0.480",
+          "Microsoft.UnitTestFramework.Extensions": "2.0.0",
           "Service-Fabric-Test-Model": "1.0.0",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
@@ -1883,7 +1922,7 @@
           "System.ComponentModel.TypeConverter": "4.1.2.0",
           "System.Console.Reference": "4.0.2.0",
           "System.Data.Common": "4.2.0.0",
-          "System.Diagnostics.Contracts": "4.0.1.0",
+          "System.Diagnostics.Contracts.Reference": "4.0.1.0",
           "System.Diagnostics.Debug.Reference": "4.0.11.0",
           "System.Diagnostics.FileVersionInfo.Reference": "4.0.2.0",
           "System.Diagnostics.Process": "4.1.2.0",
@@ -2834,7 +2873,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
-      "Microsoft.ServiceFabric/6.1.456": {
+      "Microsoft.ServiceFabric/6.1.480": {
         "runtime": {
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Internal.Strings.dll": {},
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Internal.dll": {},
@@ -2854,7 +2893,7 @@
           "Microsoft.AspNetCore.Http.Features": "2.0.2",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
-          "Microsoft.ServiceFabric.Services": "3.0.456"
+          "Microsoft.ServiceFabric.Services": "3.0.480"
         },
         "runtime": {
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.AspNetCore.dll": {}
@@ -2869,30 +2908,58 @@
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.AspNetCore.Kestrel.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Data/3.0.456": {
+      "Microsoft.ServiceFabric.Data/3.0.480": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "6.1.456"
+          "Microsoft.ServiceFabric": "6.1.480"
         },
         "runtime": {
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Data.Interfaces.dll": {},
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Data.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.456": {
+      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.480": {
         "dependencies": {
-          "Microsoft.ServiceFabric": "6.1.456"
+          "Microsoft.ServiceFabric": "6.1.480"
         },
         "runtime": {
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Diagnostics.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Services/3.0.456": {
+      "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.480": {
         "dependencies": {
-          "Microsoft.ServiceFabric.Data": "3.0.456",
-          "Microsoft.ServiceFabric.Diagnostics.Internal": "3.0.456"
+          "Microsoft.ServiceFabric": "6.1.480"
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/Microsoft.ServiceFabric.FabricTransport.V2.dll": {},
+          "runtimes/win/lib/net461/Microsoft.ServiceFabric.FabricTransport.dll": {}
+        }
+      },
+      "Microsoft.ServiceFabric.Services/3.0.480": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Data": "3.0.480",
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "3.0.480"
         },
         "runtime": {
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Services.dll": {}
+        }
+      },
+      "Microsoft.ServiceFabric.Services.Remoting/3.0.480": {
+        "dependencies": {
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "3.0.480",
+          "Microsoft.ServiceFabric.FabricTransport.Internal": "3.0.480",
+          "Microsoft.ServiceFabric.Services": "3.0.480"
+        },
+        "runtime": {
+          "runtimes/win/lib/net461/Microsoft.ServiceFabric.Services.Remoting.dll": {}
+        }
+      },
+      "Microsoft.UnitTestFramework.Extensions/2.0.0": {
+        "dependencies": {
+          "MSTest.TestFramework": "1.1.17",
+          "System.Diagnostics.Contracts": "4.0.1"
+        },
+        "runtime": {
+          "lib/net45/Microsoft.UnitTestFramework.Extensions.dll": {}
         }
       },
       "Microsoft.Win32.Registry/4.4.0": {
@@ -2902,6 +2969,12 @@
         },
         "runtime": {
           "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll": {}
+        }
+      },
+      "MSTest.TestFramework/1.1.17": {
+        "runtime": {
+          "lib/net45/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {},
+          "lib/net45/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {}
         }
       },
       "NETStandard.Library/2.0.1": {
@@ -2941,6 +3014,7 @@
         }
       },
       "System.Console/4.3.0": {},
+      "System.Diagnostics.Contracts/4.0.1": {},
       "System.Diagnostics.Debug/4.3.0": {},
       "System.Diagnostics.DiagnosticSource/4.4.1": {
         "runtime": {
@@ -3676,12 +3750,12 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric/6.1.456": {
+    "Microsoft.ServiceFabric/6.1.480": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dzv8+nRPtvAbFH7QriMF5aHusT+GNwCTQif1Z1oSuWcwrm8TuQ451ySiZcLzwijQ839adjFJPzYIj7GlezYA5Q==",
-      "path": "microsoft.servicefabric/6.1.456",
-      "hashPath": "microsoft.servicefabric.6.1.456.nupkg.sha512"
+      "sha512": "sha512-WZqhHv3sgtkmgz6imfa58J6UOIqGHRjovHiC1TyBe21dIbn9r4QosnjnSYQnESbxKQ27D12kgwmgO3ohX1FEoQ==",
+      "path": "microsoft.servicefabric/6.1.480",
+      "hashPath": "microsoft.servicefabric.6.1.480.nupkg.sha512"
     },
     "Microsoft.ServiceFabric.AspNetCore.Abstractions/3.0.456": {
       "type": "package",
@@ -3697,26 +3771,47 @@
       "path": "microsoft.servicefabric.aspnetcore.kestrel/3.0.456",
       "hashPath": "microsoft.servicefabric.aspnetcore.kestrel.3.0.456.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Data/3.0.456": {
+    "Microsoft.ServiceFabric.Data/3.0.480": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9fb6nY2Oy+oB1FitA4X23et2J1ZlLfoAUbMPLYN0mxGC5h/gkIvLp93VyH8RecAWGgMMJ7cCR0u8kpRnedybRg==",
-      "path": "microsoft.servicefabric.data/3.0.456",
-      "hashPath": "microsoft.servicefabric.data.3.0.456.nupkg.sha512"
+      "sha512": "sha512-6xGX90T92U5bUf5zu+Ro2tBsWIgI1fQEv6me6U+z58yy1JeJ4Mn0Nu0FzMTl517wYFeEplu/8mg8WV7xqP2a3Q==",
+      "path": "microsoft.servicefabric.data/3.0.480",
+      "hashPath": "microsoft.servicefabric.data.3.0.480.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.456": {
+    "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.480": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-r56PGPXI768BzHaPCQMkESbtl1uHgDSQommZQh7B+sOEyFYIwnOs0H9zkT8qQBKenQF6GyEOhZPPwc4NwFHUsQ==",
-      "path": "microsoft.servicefabric.diagnostics.internal/3.0.456",
-      "hashPath": "microsoft.servicefabric.diagnostics.internal.3.0.456.nupkg.sha512"
+      "sha512": "sha512-1KeN8lpOMfRtH1FVyULMErcxYooR/IBVcE02oizOkoQyM4D26+m/l1FIzXawE3cw7ZwmJqXt1bLLG9Co5u//7A==",
+      "path": "microsoft.servicefabric.diagnostics.internal/3.0.480",
+      "hashPath": "microsoft.servicefabric.diagnostics.internal.3.0.480.nupkg.sha512"
     },
-    "Microsoft.ServiceFabric.Services/3.0.456": {
+    "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.480": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hUa1RprtMRaCh+TIh5TdcUEiPsgwuzvIIKlwNuHLWFkIU9Ujo3+WDS5sIqFZ33CGjmeEBgadMu6z2lUfzhiqMQ==",
-      "path": "microsoft.servicefabric.services/3.0.456",
-      "hashPath": "microsoft.servicefabric.services.3.0.456.nupkg.sha512"
+      "sha512": "sha512-uasTPTjZPQ01fcYcRijPq4G3/VQDVn0I02lTY68CZ924yxML5cQOR5JhCkY92TpBiuBM7gs6i23LouPcJYGPkA==",
+      "path": "microsoft.servicefabric.fabrictransport.internal/3.0.480",
+      "hashPath": "microsoft.servicefabric.fabrictransport.internal.3.0.480.nupkg.sha512"
+    },
+    "Microsoft.ServiceFabric.Services/3.0.480": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KwGkrKez4fqzaTuzZDAOJ+cRUKECQ124gceSg0mk75MhofwUdKyDJeHJliMFnq5UYK9v6ktTLdQAP/m67iUP2w==",
+      "path": "microsoft.servicefabric.services/3.0.480",
+      "hashPath": "microsoft.servicefabric.services.3.0.480.nupkg.sha512"
+    },
+    "Microsoft.ServiceFabric.Services.Remoting/3.0.480": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mgDF9PWdHoL/U6z1Es7YmwZUSf/wAZa/UAj1hz0U+sIzVRN+Y1ksovMswl7OwCU2vPyWuoKOsLUFJz85f78YeQ==",
+      "path": "microsoft.servicefabric.services.remoting/3.0.480",
+      "hashPath": "microsoft.servicefabric.services.remoting.3.0.480.nupkg.sha512"
+    },
+    "Microsoft.UnitTestFramework.Extensions/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JwmCxSCRMSmumUtGuAuKjY5itN4qaRIf5B2XS33ypkkj1OR+j2XDoVESQz205XDy97zxN1G1EFFpoWZOyeYoWw==",
+      "path": "microsoft.unittestframework.extensions/2.0.0",
+      "hashPath": "microsoft.unittestframework.extensions.2.0.0.nupkg.sha512"
     },
     "Microsoft.Win32.Registry/4.4.0": {
       "type": "package",
@@ -3724,6 +3819,13 @@
       "sha512": "sha512-dA36TlNVn/XfrZtmf0fiI/z1nd3Wfp2QVzTdj26pqgP9LFWq0i1hYEUAW50xUjGFYn1+/cP3KGuxT2Yn1OUNBQ==",
       "path": "microsoft.win32.registry/4.4.0",
       "hashPath": "microsoft.win32.registry.4.4.0.nupkg.sha512"
+    },
+    "MSTest.TestFramework/1.1.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qZQlOVXsCSgEXPQ9TRkIeJYxuprquUiWWoOGNw6emOhQrKcOCIh8++vwJv5xyksb/kt8ZnHQ8wDJuJVcJ7gKNw==",
+      "path": "mstest.testframework/1.1.17",
+      "hashPath": "mstest.testframework.1.1.17.nupkg.sha512"
     },
     "NETStandard.Library/2.0.1": {
       "type": "package",
@@ -3794,6 +3896,13 @@
       "sha512": "sha512-DHDrIxiqk1h03m6khKWV2X8p/uvN79rgSqpilL6uzpmSfxfU5ng8VcPtW4qsDsQDHiTv6IPV9TmD5M/vElPNLg==",
       "path": "system.console/4.3.0",
       "hashPath": "system.console.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Contracts/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HvQQjy712vnlpPxaloZYkuE78Gn353L0SJLJVeLcNASeg9c4qla2a1Xq8I7B3jZoDzKPtHTkyVO7AZ5tpeQGuA==",
+      "path": "system.diagnostics.contracts/4.0.1",
+      "hashPath": "system.diagnostics.contracts.4.0.1.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
@@ -4291,7 +4400,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Diagnostics.Contracts/4.0.1.0": {
+    "System.Diagnostics.Contracts.Reference/4.0.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

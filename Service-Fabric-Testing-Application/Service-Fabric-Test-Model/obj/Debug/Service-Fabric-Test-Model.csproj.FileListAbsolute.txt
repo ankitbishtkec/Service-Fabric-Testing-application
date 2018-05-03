@@ -33,3 +33,4 @@ C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabri
 C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\bin\Debug\Microsoft.ServiceFabric.Services.xml
 C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\bin\Debug\Microsoft.ServiceFabric.Services.Remoting.xml
 C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\bin\Debug\System.Fabric.xml
+C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\obj\Debug\Service-Fabric-Test-Model.csprojResolveAssemblyReference.cache

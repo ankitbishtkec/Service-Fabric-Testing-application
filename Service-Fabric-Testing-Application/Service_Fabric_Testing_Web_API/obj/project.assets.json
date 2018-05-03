@@ -1260,7 +1260,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.ServiceFabric/6.1.456": {
+      "Microsoft.ServiceFabric/6.1.480": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Internal.Strings.dll": {},
@@ -1406,10 +1406,10 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Data/3.0.456": {
+      "Microsoft.ServiceFabric.Data/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric": "[6.1.456]"
+          "Microsoft.ServiceFabric": "[6.1.480]"
         },
         "frameworkAssemblies": [
           "System.Runtime.Serialization"
@@ -1441,10 +1441,10 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.456": {
+      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric": "[6.1.456]"
+          "Microsoft.ServiceFabric": "[6.1.480]"
         },
         "frameworkAssemblies": [
           "System.Runtime.Serialization",
@@ -1467,10 +1467,10 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.456": {
+      "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric": "[6.1.456]"
+          "Microsoft.ServiceFabric": "[6.1.480]"
         },
         "frameworkAssemblies": [
           "System.Runtime.Serialization",
@@ -1523,11 +1523,11 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Services/3.0.456": {
+      "Microsoft.ServiceFabric.Services/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric.Data": "[3.0.456]",
-          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.456]"
+          "Microsoft.ServiceFabric.Data": "[3.0.480]",
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.480]"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Services.dll": {}
@@ -1546,12 +1546,12 @@
           }
         }
       },
-      "Microsoft.ServiceFabric.Services.Remoting/3.0.456": {
+      "Microsoft.ServiceFabric.Services.Remoting/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.456]",
-          "Microsoft.ServiceFabric.FabricTransport.Internal": "[3.0.456]",
-          "Microsoft.ServiceFabric.Services": "[3.0.456]"
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.480]",
+          "Microsoft.ServiceFabric.FabricTransport.Internal": "[3.0.480]",
+          "Microsoft.ServiceFabric.Services": "[3.0.480]"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Services.Remoting.dll": {}
@@ -3575,7 +3575,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.ServiceFabric/6.1.456": {
+      "Microsoft.ServiceFabric/6.1.480": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Internal.Strings.dll": {},
@@ -3627,10 +3627,10 @@
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.AspNetCore.Kestrel.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Data/3.0.456": {
+      "Microsoft.ServiceFabric.Data/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric": "[6.1.456]"
+          "Microsoft.ServiceFabric": "[6.1.480]"
         },
         "frameworkAssemblies": [
           "System.Runtime.Serialization"
@@ -3644,10 +3644,10 @@
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Data.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.456": {
+      "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric": "[6.1.456]"
+          "Microsoft.ServiceFabric": "[6.1.480]"
         },
         "frameworkAssemblies": [
           "System.Runtime.Serialization",
@@ -3660,10 +3660,10 @@
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Diagnostics.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.456": {
+      "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric": "[6.1.456]"
+          "Microsoft.ServiceFabric": "[6.1.480]"
         },
         "frameworkAssemblies": [
           "System.Runtime.Serialization",
@@ -3678,11 +3678,11 @@
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.FabricTransport.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Services/3.0.456": {
+      "Microsoft.ServiceFabric.Services/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric.Data": "[3.0.456]",
-          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.456]"
+          "Microsoft.ServiceFabric.Data": "[3.0.480]",
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.480]"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Services.dll": {}
@@ -3691,12 +3691,12 @@
           "runtimes/win/lib/net461/Microsoft.ServiceFabric.Services.dll": {}
         }
       },
-      "Microsoft.ServiceFabric.Services.Remoting/3.0.456": {
+      "Microsoft.ServiceFabric.Services.Remoting/3.0.480": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.456]",
-          "Microsoft.ServiceFabric.FabricTransport.Internal": "[3.0.456]",
-          "Microsoft.ServiceFabric.Services": "[3.0.456]"
+          "Microsoft.ServiceFabric.Diagnostics.Internal": "[3.0.480]",
+          "Microsoft.ServiceFabric.FabricTransport.Internal": "[3.0.480]",
+          "Microsoft.ServiceFabric.Services": "[3.0.480]"
         },
         "compile": {
           "ref/netstandard2.0/Microsoft.ServiceFabric.Services.Remoting.dll": {}
@@ -5449,10 +5449,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.ServiceFabric/6.1.456": {
-      "sha512": "dzv8+nRPtvAbFH7QriMF5aHusT+GNwCTQif1Z1oSuWcwrm8TuQ451ySiZcLzwijQ839adjFJPzYIj7GlezYA5Q==",
+    "Microsoft.ServiceFabric/6.1.480": {
+      "sha512": "WZqhHv3sgtkmgz6imfa58J6UOIqGHRjovHiC1TyBe21dIbn9r4QosnjnSYQnESbxKQ27D12kgwmgO3ohX1FEoQ==",
       "type": "package",
-      "path": "microsoft.servicefabric/6.1.456",
+      "path": "microsoft.servicefabric/6.1.480",
       "files": [
         "lib/net45/Microsoft.ServiceFabric.Internal.Strings.dll",
         "lib/net45/Microsoft.ServiceFabric.Internal.dll",
@@ -5463,7 +5463,7 @@
         "lib/net45/System.Fabric.Strings.dll",
         "lib/net45/System.Fabric.dll",
         "lib/net45/System.Fabric.xml",
-        "microsoft.servicefabric.6.1.456.nupkg.sha512",
+        "microsoft.servicefabric.6.1.480.nupkg.sha512",
         "microsoft.servicefabric.nuspec",
         "ref/netstandard2.0/Microsoft.ServiceFabric.Internal.Strings.dll",
         "ref/netstandard2.0/Microsoft.ServiceFabric.Internal.dll",
@@ -5554,16 +5554,16 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.AspNetCore.Kestrel.dll"
       ]
     },
-    "Microsoft.ServiceFabric.Data/3.0.456": {
-      "sha512": "9fb6nY2Oy+oB1FitA4X23et2J1ZlLfoAUbMPLYN0mxGC5h/gkIvLp93VyH8RecAWGgMMJ7cCR0u8kpRnedybRg==",
+    "Microsoft.ServiceFabric.Data/3.0.480": {
+      "sha512": "6xGX90T92U5bUf5zu+Ro2tBsWIgI1fQEv6me6U+z58yy1JeJ4Mn0Nu0FzMTl517wYFeEplu/8mg8WV7xqP2a3Q==",
       "type": "package",
-      "path": "microsoft.servicefabric.data/3.0.456",
+      "path": "microsoft.servicefabric.data/3.0.480",
       "files": [
         "lib/net45/Microsoft.ServiceFabric.Data.Interfaces.dll",
         "lib/net45/Microsoft.ServiceFabric.Data.Interfaces.xml",
         "lib/net45/Microsoft.ServiceFabric.Data.dll",
         "lib/net45/Microsoft.ServiceFabric.Data.xml",
-        "microsoft.servicefabric.data.3.0.456.nupkg.sha512",
+        "microsoft.servicefabric.data.3.0.480.nupkg.sha512",
         "microsoft.servicefabric.data.nuspec",
         "ref/netstandard2.0/Microsoft.ServiceFabric.Data.Interfaces.dll",
         "ref/netstandard2.0/Microsoft.ServiceFabric.Data.dll",
@@ -5581,14 +5581,14 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.Data.dll"
       ]
     },
-    "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.456": {
-      "sha512": "r56PGPXI768BzHaPCQMkESbtl1uHgDSQommZQh7B+sOEyFYIwnOs0H9zkT8qQBKenQF6GyEOhZPPwc4NwFHUsQ==",
+    "Microsoft.ServiceFabric.Diagnostics.Internal/3.0.480": {
+      "sha512": "1KeN8lpOMfRtH1FVyULMErcxYooR/IBVcE02oizOkoQyM4D26+m/l1FIzXawE3cw7ZwmJqXt1bLLG9Co5u//7A==",
       "type": "package",
-      "path": "microsoft.servicefabric.diagnostics.internal/3.0.456",
+      "path": "microsoft.servicefabric.diagnostics.internal/3.0.480",
       "files": [
         "lib/net45/Microsoft.ServiceFabric.Diagnostics.dll",
         "lib/net45/Microsoft.ServiceFabric.Diagnostics.xml",
-        "microsoft.servicefabric.diagnostics.internal.3.0.456.nupkg.sha512",
+        "microsoft.servicefabric.diagnostics.internal.3.0.480.nupkg.sha512",
         "microsoft.servicefabric.diagnostics.internal.nuspec",
         "ref/netstandard2.0/Microsoft.ServiceFabric.Diagnostics.dll",
         "runtimes/linux/lib/netstandard2.0/Microsoft.ServiceFabric.Diagnostics.dll",
@@ -5599,16 +5599,16 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.Diagnostics.dll"
       ]
     },
-    "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.456": {
-      "sha512": "jQhHtx3O6hRfEfnpffYssHg/SU17BWkrlKFbR460KORmeqkM9UMTYmKhWTP5Q+7kNIpgqWUjCdEjXSbt4XKMOw==",
+    "Microsoft.ServiceFabric.FabricTransport.Internal/3.0.480": {
+      "sha512": "uasTPTjZPQ01fcYcRijPq4G3/VQDVn0I02lTY68CZ924yxML5cQOR5JhCkY92TpBiuBM7gs6i23LouPcJYGPkA==",
       "type": "package",
-      "path": "microsoft.servicefabric.fabrictransport.internal/3.0.456",
+      "path": "microsoft.servicefabric.fabrictransport.internal/3.0.480",
       "files": [
         "lib/net45/Microsoft.ServiceFabric.FabricTransport.V2.dll",
         "lib/net45/Microsoft.ServiceFabric.FabricTransport.V2.xml",
         "lib/net45/Microsoft.ServiceFabric.FabricTransport.dll",
         "lib/net45/Microsoft.ServiceFabric.FabricTransport.xml",
-        "microsoft.servicefabric.fabrictransport.internal.3.0.456.nupkg.sha512",
+        "microsoft.servicefabric.fabrictransport.internal.3.0.480.nupkg.sha512",
         "microsoft.servicefabric.fabrictransport.internal.nuspec",
         "ref/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.V2.dll",
         "ref/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.dll",
@@ -5631,14 +5631,14 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.FabricTransport.dll"
       ]
     },
-    "Microsoft.ServiceFabric.Services/3.0.456": {
-      "sha512": "hUa1RprtMRaCh+TIh5TdcUEiPsgwuzvIIKlwNuHLWFkIU9Ujo3+WDS5sIqFZ33CGjmeEBgadMu6z2lUfzhiqMQ==",
+    "Microsoft.ServiceFabric.Services/3.0.480": {
+      "sha512": "KwGkrKez4fqzaTuzZDAOJ+cRUKECQ124gceSg0mk75MhofwUdKyDJeHJliMFnq5UYK9v6ktTLdQAP/m67iUP2w==",
       "type": "package",
-      "path": "microsoft.servicefabric.services/3.0.456",
+      "path": "microsoft.servicefabric.services/3.0.480",
       "files": [
         "lib/net45/Microsoft.ServiceFabric.Services.dll",
         "lib/net45/Microsoft.ServiceFabric.Services.xml",
-        "microsoft.servicefabric.services.3.0.456.nupkg.sha512",
+        "microsoft.servicefabric.services.3.0.480.nupkg.sha512",
         "microsoft.servicefabric.services.nuspec",
         "ref/netstandard2.0/Microsoft.ServiceFabric.Services.dll",
         "runtimes/linux/lib/netstandard2.0/Microsoft.ServiceFabric.Services.dll",
@@ -5649,14 +5649,14 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.ServiceFabric.Services.dll"
       ]
     },
-    "Microsoft.ServiceFabric.Services.Remoting/3.0.456": {
-      "sha512": "122XxPDEQhMUj+NTJW2/s9wWSlyCOdmYF8cJnq7P5eOU9nEL8A/wSfQwpm8HmLorp2spElexyGCwcfCD/NHkTw==",
+    "Microsoft.ServiceFabric.Services.Remoting/3.0.480": {
+      "sha512": "mgDF9PWdHoL/U6z1Es7YmwZUSf/wAZa/UAj1hz0U+sIzVRN+Y1ksovMswl7OwCU2vPyWuoKOsLUFJz85f78YeQ==",
       "type": "package",
-      "path": "microsoft.servicefabric.services.remoting/3.0.456",
+      "path": "microsoft.servicefabric.services.remoting/3.0.480",
       "files": [
         "lib/net45/Microsoft.ServiceFabric.Services.Remoting.dll",
         "lib/net45/Microsoft.ServiceFabric.Services.Remoting.xml",
-        "microsoft.servicefabric.services.remoting.3.0.456.nupkg.sha512",
+        "microsoft.servicefabric.services.remoting.3.0.480.nupkg.sha512",
         "microsoft.servicefabric.services.remoting.nuspec",
         "ref/netstandard2.0/Microsoft.ServiceFabric.Services.Remoting.dll",
         "runtimes/linux/lib/netstandard2.0/Microsoft.ServiceFabric.Services.Remoting.dll",
@@ -8541,11 +8541,11 @@
     ".NETFramework,Version=v4.6.1": [
       "Microsoft.AspNetCore >= 2.0.2",
       "Microsoft.AspNetCore.Mvc >= 2.0.3",
-      "Microsoft.ServiceFabric >= 6.1.456",
+      "Microsoft.ServiceFabric >= 6.1.480",
       "Microsoft.ServiceFabric.AspNetCore.Kestrel >= 3.0.456",
-      "Microsoft.ServiceFabric.Data >= 3.0.456",
-      "Microsoft.ServiceFabric.Services >= 3.0.456",
-      "Microsoft.ServiceFabric.Services.Remoting >= 3.0.456",
+      "Microsoft.ServiceFabric.Data >= 3.0.480",
+      "Microsoft.ServiceFabric.Services >= 3.0.480",
+      "Microsoft.ServiceFabric.Services.Remoting >= 3.0.480",
       "Microsoft.UnitTestFramework.Extensions >= 2.0.0",
       "Service-Fabric-Test-Model >= 1.0.0"
     ]
@@ -8607,7 +8607,7 @@
           },
           "Microsoft.ServiceFabric": {
             "target": "Package",
-            "version": "[6.1.456, )"
+            "version": "[6.1.480, )"
           },
           "Microsoft.ServiceFabric.AspNetCore.Kestrel": {
             "target": "Package",
@@ -8615,15 +8615,15 @@
           },
           "Microsoft.ServiceFabric.Data": {
             "target": "Package",
-            "version": "[3.0.456, )"
+            "version": "[3.0.480, )"
           },
           "Microsoft.ServiceFabric.Services": {
             "target": "Package",
-            "version": "[3.0.456, )"
+            "version": "[3.0.480, )"
           },
           "Microsoft.ServiceFabric.Services.Remoting": {
             "target": "Package",
-            "version": "[3.0.456, )"
+            "version": "[3.0.480, )"
           },
           "Microsoft.UnitTestFramework.Extensions": {
             "target": "Package",
@@ -8637,5 +8637,18 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.ServiceFabric.AspNetCore.Abstractions 3.0.456 requires Microsoft.ServiceFabric.Services (= 3.0.456) but version Microsoft.ServiceFabric.Services 3.0.480 was resolved.",
+      "libraryId": "Microsoft.ServiceFabric.Services",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETFramework,Version=v4.6.1/win7-x64"
+      ]
+    }
+  ]
 }

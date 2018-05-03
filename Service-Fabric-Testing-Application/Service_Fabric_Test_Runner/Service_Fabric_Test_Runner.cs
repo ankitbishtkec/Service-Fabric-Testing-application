@@ -10,6 +10,7 @@ using Microsoft.ServiceFabric.Services.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Service_Fabric_Test_Model;
 using Microsoft.ServiceFabric.Services.Remoting.V2.FabricTransport.Runtime;
+using System.Reflection;
 
 namespace Service_Fabric_Test_Runner
 {
@@ -31,7 +32,35 @@ namespace Service_Fabric_Test_Runner
 
         public async Task<TestRunnerResponse> RunTestCase(TestId testId)
         {
-            throw new NotImplementedException();
+            //Type classType = null;
+            //MethodInfo testMethod = null;
+            //MethodInfo preTestMethod = null;
+            //MethodInfo postTestMethod = null;
+            //Dictionary<string, MethodInfo> methodsInClass = new Dictionary<string, MethodInfo>();
+            //Assembly mscorlib = Assembly.GetExecutingAssembly();
+            //foreach (Type type in mscorlib.GetTypes())//find all classes in assembly
+            //{
+            //    foreach (Object attributes in type.GetCustomAttributes(false))//find all attributes on class
+            //    {
+            //        TestClassAttribute testClassAttribute = attributes as TestClassAttribute;
+
+            //        if (testClassAttribute != null && type.FullName == testId.NamespaceNameDotClassName)//if class has 'TestClass' attribute and matches the class name of required test case
+            //        {
+            //            classType = type;
+            //            foreach (MethodInfo m in type.GetMethods())
+            //                methodsInClass.Add(m.Name, m);
+            //            if( methodsInClass.ContainsKey( testId.MethodName) )
+            //            {
+            //                testMethod = methodsInClass[testId.MethodName];
+
+            //            }
+            //            //write your code here
+            //            break;
+            //        }
+            //    }
+            //}
+            TestRunnerResponse tr = new TestRunnerResponse(3000);
+            return tr;
         }
 
         /// <summary>
@@ -43,7 +72,6 @@ namespace Service_Fabric_Test_Runner
         /// <returns>A collection of listeners.</returns>
         protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListeners()
         {
-
             return new[]{
                 new ServiceReplicaListener(
                     (context) => new FabricTransportServiceRemotingListener(context,this))};
