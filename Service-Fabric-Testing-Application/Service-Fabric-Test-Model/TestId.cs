@@ -11,6 +11,11 @@ namespace Service_Fabric_Test_Model
         private string methodName = string.Empty;
         private Guid clientTestClassRunId = new Guid();
 
+        //empty argument constructor added to resolve exception during service remoting
+        private TestId()
+        {
+
+        }
         public TestId( string namespaceNameDotClassName, string methodName, Guid clientTestClassRunId)
         {
             this.namespaceNameDotClassName = namespaceNameDotClassName;

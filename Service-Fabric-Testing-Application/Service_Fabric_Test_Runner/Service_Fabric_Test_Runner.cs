@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Service_Fabric_Test_Model;
 using Microsoft.ServiceFabric.Services.Remoting.V2.FabricTransport.Runtime;
 using System.Reflection;
+using Microsoft.ServiceFabric.Data;
 
 namespace Service_Fabric_Test_Runner
 {
@@ -25,9 +26,20 @@ namespace Service_Fabric_Test_Runner
 
         public async Task<TestResult> GetTestResult(Guid guid)
         {
-            TestResult tr = new TestResult();
-            tr.Outcome = UnitTestOutcome.Inconclusive;
-            return tr;
+            ConditionalValue<TestResult> testResult;
+            try
+            {
+                var testResults = await this.StateManager.GetOrAddAsync<IReliableDictionary<Guid, TestResult>>("TestResults");
+                using (var tx = this.StateManager.CreateTransaction())
+                {
+                    testResult = await testResults.TryGetValueAsync(tx, guid);
+                }
+            }
+            catch( Exception ex)
+            {
+                return null;
+            }
+            return (testResult.HasValue) ? testResult.Value : null;
         }
 
         public async Task<TestRunnerResponse> RunTestCase(TestId testId)

@@ -25,16 +25,18 @@ namespace Service_Fabric_Testing_Web_API.Controllers
         [HttpGet("{id}")]
         public async Task<JsonResult> Get(Guid id)
         {
-            JsonResult response = new JsonResult(null);
+            JsonResult response = null;
             try
             {
-                //response.StatusCode = 500;
                 TestResult tr = await _serviceFabricTestRunner.GetTestResult(id);
                 response = new JsonResult(tr);
+                if( tr == null)
+                    response.StatusCode = 404;
             }
             catch( Exception ex)
             {
                 response = new JsonResult(ex);
+                response.StatusCode = 500;
             }
             return response;
         }
@@ -44,14 +46,27 @@ namespace Service_Fabric_Testing_Web_API.Controllers
         public async Task<JsonResult> Post([FromBody]TestId testId)
         {
             string error = "";
-            JsonResult response;
-            if (testId == null || !testId.IsValid(ref error))
+            JsonResult response = null;
+            try
             {
-                response = new JsonResult(error);
-                response.StatusCode = 400;
-                return response;
+                if (testId == null || !testId.IsValid(ref error))
+                {
+                    response = new JsonResult(error);
+                    response.StatusCode = 400;
+                }
+                else
+                {
+                    TestRunnerResponse testRunnerResponse = await _serviceFabricTestRunner.RunTestCase(testId);
+                    if (testRunnerResponse == null)
+                        response.StatusCode = 404;
+                    response = new JsonResult(testRunnerResponse);
+                }
             }
-            response = new JsonResult(new TestRunnerResponse(50000));
+            catch (Exception ex)
+            {
+                response = new JsonResult(ex);
+                response.StatusCode = 500;
+            }
             return response;
         }
     }

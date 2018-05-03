@@ -14,7 +14,9 @@ namespace Service_Fabric_Test_Model
         private string testRunnerErrorDescription = string.Empty;
         private string testRunnerStackTrace = string.Empty;
 
-        public TestRunnerResponse()
+
+        //empty argument constructor added to resolve exception during service remoting
+        private TestRunnerResponse()
         {
         }
 
