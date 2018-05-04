@@ -9,6 +9,7 @@ namespace Service_Fabric_Test_Model
     {
         private string namespaceNameDotClassName = string.Empty;
         private string methodName = string.Empty;
+        //-> 'clientTestClassRunId' represents the running instance id of test class containing test methods on client side. It will be same for all Test methods run inside a Test class. It can be used to associate different test methods run and help to execute( using reliable store or otherwise) certain operations only once per class per run.
         private Guid clientTestClassRunId = new Guid();
 
         //empty argument constructor added to resolve exception during service remoting

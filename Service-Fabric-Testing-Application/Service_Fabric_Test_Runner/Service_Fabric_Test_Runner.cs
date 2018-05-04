@@ -134,7 +134,6 @@ namespace Service_Fabric_Test_Runner
                     testResult.LogOutput = testResult.LogOutput + " # " + classType.Name;
                     testResult.LogOutput = testResult.LogOutput + " # " + testMethod.Name;
                     testResult.LogOutput = testResult.LogOutput + " \n TestRunInstanceGuid # Namespace Name # Test Class Name # Test Method Name";
-                    testResult.LogOutput = testResult.LogOutput + " \n PreTestMethod has started execution.";
                     object[] parametersArray = new object[] { testId.ClientTestClassRunId };
                     classInstance = Activator.CreateInstance(classType, null);
 
