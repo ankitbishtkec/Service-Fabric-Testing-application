@@ -9,7 +9,7 @@ namespace Service_Fabric_Test_Model
     public class TestRunnerResponse
     {
         private Guid testRunInstanceGuid = Guid.NewGuid();
-        private int timeToWaitBeforeFetchingResults = 60000;//default time is 60 seconds
+        private uint timeToWaitBeforeFetchingResults = 60000;//default time is 60 seconds
         private bool hasError = false;
         private string testRunnerErrorDescription = string.Empty;
         private string testRunnerStackTrace = string.Empty;
@@ -20,12 +20,12 @@ namespace Service_Fabric_Test_Model
         {
         }
 
-        public TestRunnerResponse(int timeToWaitBeforeFetchingResults)
+        public TestRunnerResponse(uint timeToWaitBeforeFetchingResults)
         {
             this.timeToWaitBeforeFetchingResults = timeToWaitBeforeFetchingResults;
         }
 
-        public int TimeToWaitBeforeFetchingResults
+        public uint TimeToWaitBeforeFetchingResults
         {
             get
             {
@@ -42,6 +42,10 @@ namespace Service_Fabric_Test_Model
             get
             {
                 return this.testRunInstanceGuid;
+            }
+            set
+            {
+                this.testRunInstanceGuid = value;
             }
         }
 

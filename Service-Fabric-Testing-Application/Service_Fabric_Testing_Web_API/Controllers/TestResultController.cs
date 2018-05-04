@@ -57,9 +57,11 @@ namespace Service_Fabric_Testing_Web_API.Controllers
                 else
                 {
                     TestRunnerResponse testRunnerResponse = await _serviceFabricTestRunner.RunTestCase(testId);
+                    response = new JsonResult(testRunnerResponse);
                     if (testRunnerResponse == null)
                         response.StatusCode = 404;
-                    response = new JsonResult(testRunnerResponse);
+                    else if (testRunnerResponse.HasError)
+                        response.StatusCode = 500;
                 }
             }
             catch (Exception ex)

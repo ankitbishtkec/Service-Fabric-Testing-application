@@ -3,10 +3,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading;
 using System;
 
-//Class name, namespace name and function name here should exactly match with Class name, namespace name and function name of test solution
+//-> Class name, namespace name and function name here should exactly match with Class name, namespace name and function name of test solution
 //These 3 are used to identify a test cases here and have a 1 to 1 mapping with a test case on client side.
+//-> 'TestResult' object will not have your output or error logs emitted. Use your own logs library. 'clientTestClassRunId' + namespace name + class name + method name can be unique id for a run during logging. Or override Console.WriteLine https://stackoverflow.com/questions/32661000/how-can-i-use-an-own-class-for-console-writeline-override https://blogs.msdn.microsoft.com/gautamg/2009/12/08/logging-a-message-in-test-result-as-part-of-an-automated-test/
 namespace DemoTestCasesNamespace
 {
+    //a public argument less constructor must be added, if another constructor is present.
     [TestClass]
     public class DemoTestCases
     {
@@ -19,6 +21,7 @@ namespace DemoTestCasesNamespace
             //-> Reliable store can be used to mark enviroment as fresh or dirty at preTestMethod or postTestMethod. So that multiple environment reset etc code in preTestMethod or environment cleanup etc in postTestMenthod can be skipped based on its value. This logic can be written by Test developer based on need.
             //-> This method should have one argument a Guid and should be in same class as Test method.
             //-> 'clientTestClassRunId' represents the running instance id of test class containing test methods. It will be same for all Test methods run inside a Test class. It can be used to associate different test methods run and help to execute( using reliable store or otherwise) certain operations only once per class per run.
+            //-> Use your own logs library. 'clientTestClassRunId' + namespace name + class name + method name can be unique id for a run during logging.. Or override Console.WriteLine https://stackoverflow.com/questions/32661000/how-can-i-use-an-own-class-for-console-writeline-override https://blogs.msdn.microsoft.com/gautamg/2009/12/08/logging-a-message-in-test-result-as-part-of-an-automated-test/
 
             Thread.Sleep(2000);
         }
@@ -37,6 +40,7 @@ namespace DemoTestCasesNamespace
             //-> If certain output or event is not available after 'n' retries. This information will be available at client test case's TestResult object.
             //-> This method should have one argument a Guid.
             //-> 'clientTestClassRunId' represents the running instance id of test class containing test methods. It will be same for all Test methods run inside a Test class. It can be used to associate different test methods run and help to execute( using reliable store or otherwise) certain operations only once per class per run.
+            //-> Use your own logs library. 'clientTestClassRunId' + namespace name + class name + method name can be unique id for a run during logging.. Or override Console.WriteLine https://stackoverflow.com/questions/32661000/how-can-i-use-an-own-class-for-console-writeline-override https://blogs.msdn.microsoft.com/gautamg/2009/12/08/logging-a-message-in-test-result-as-part-of-an-automated-test/
 
             int i = 0;
             i++;
@@ -52,6 +56,7 @@ namespace DemoTestCasesNamespace
             //-> Reliable store can be used to mark enviroment as fresh or dirty at preTestMethod or postTestMethod. So that multiple environment reset etc code in preTestMethod or environment cleanup etc in postTestMenthod can be skipped based on its value. This logic can be written by Test developer based on need.
             //-> This method should have one argument a Guid and should be in same class as Test method.
             //-> 'clientTestClassRunId' represents the running instance id of test class containing test methods. It will be same for all Test methods run inside a Test class. It can be used to associate different test methods run and help to execute( using reliable store or otherwise) certain operations only once per class per run.
+            //-> Use your own logs library. 'clientTestClassRunId' + namespace name + class name + method name can be unique id for a run during logging.. Or override Console.WriteLine https://stackoverflow.com/questions/32661000/how-can-i-use-an-own-class-for-console-writeline-override https://blogs.msdn.microsoft.com/gautamg/2009/12/08/logging-a-message-in-test-result-as-part-of-an-automated-test/
 
             Thread.Sleep(1000);
         }
@@ -67,6 +72,24 @@ namespace DemoTestCasesNamespace
         public void DemoTestMethodFailAgain( Guid clientTestClassRunId = new Guid())
         {
             int i = 0;
+            Assert.AreEqual(i, 1);
+        }
+
+        [TestMethodServiceFabric()]
+        public void TestMethodPass1(Guid clientTestClassRunId = new Guid())
+        {
+            int i = 0;
+            i++;
+            Thread.Sleep(3333);
+            Assert.AreEqual(i, 1);
+        }
+
+        [TestMethodServiceFabric(5000)]
+        public void TestMethodPassLongRunning(Guid clientTestClassRunId = new Guid())
+        {
+            int i = 0;
+            i++;
+            Thread.Sleep(20000);
             Assert.AreEqual(i, 1);
         }
     }
