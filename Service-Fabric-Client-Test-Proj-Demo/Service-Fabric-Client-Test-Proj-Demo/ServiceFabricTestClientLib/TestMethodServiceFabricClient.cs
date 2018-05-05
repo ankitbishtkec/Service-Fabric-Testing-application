@@ -1,5 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Service_Fabric_Test_Model;
+using Newtonsoft.Json;
+using System.Net;
+using System.IO;
+using System.Threading;
 
 namespace ServiceFabricTestClientLib
 {
@@ -10,6 +15,8 @@ namespace ServiceFabricTestClientLib
         private uint maxRetriesToFetchTestResult = 2;//default is 2 retries
         //-> 'testClassRunId' represents the running instance id of test class containing test methods. It will be same for all Test methods run inside a Test class. It can be used to associate different test methods run on server side.
         private Guid testClassRunId = new Guid();
+        //-> represents server where test code will run
+        private string testServerURL = string.Empty;
 
         public TestMethodServiceFabricClientAttribute(uint maxRetriesToFetchTestResult = 2)
         {
@@ -35,6 +42,18 @@ namespace ServiceFabricTestClientLib
             }
         }
 
+        public string TestServerURL
+        {
+            get
+            {
+                return this.testServerURL;
+            }
+            set
+            {
+                this.testServerURL = value;
+            }
+        }
+
         //
         // Summary:
         //     Executes a test method.
@@ -52,10 +71,68 @@ namespace ServiceFabricTestClientLib
         {
             TestResult testResult = null;
             testResult = testMethod.Invoke(null);
-            if (testResult.Outcome == UnitTestOutcome.Passed && this.testClassRunId != Guid.Empty)
+            if (testResult.Outcome == UnitTestOutcome.Passed && this.testClassRunId != Guid.Empty && this.testServerURL != string.Empty)
             {
-                //write code here to start test case at server side and fetch the result from server.
-                ;
+                //request server to run test case
+                TestId testRequestId = new TestId(testMethod.TestClassName, testMethod.TestMethodName, this.testClassRunId);
+                string requestBody = JsonConvert.SerializeObject(testRequestId);
+                HttpWebResponse testRunResponse;
+                HttpWebResponse testResultResponse;
+                string testRunResponseString = string.Empty;
+                string testResultResponseString = string.Empty;
+                string debuggingLog = string.Empty;
+                string testServerPOSTapiURL = this.testServerURL + "/api/testresult";
+                debuggingLog = debuggingLog + "< " + testServerPOSTapiURL + " >< " + requestBody + " >";
+                try
+                {
+                    testRunResponse = HttpRequestHelper.makePOSTRequest(testServerPOSTapiURL, requestBody);
+                    using (var streamReader = new StreamReader(testRunResponse.GetResponseStream()))
+                    {
+                        testRunResponseString = streamReader.ReadToEnd();
+                    }
+                    debuggingLog = debuggingLog + "< " + testRunResponseString + " >";
+                    TestRunnerResponse testRunnerResponse = JsonConvert.DeserializeObject<TestRunnerResponse>( testRunResponseString );
+                    if(testRunnerResponse.HasError == true)
+                    {
+                        throw new Exception("< " + testRunnerResponse.TestRunnerErrorDescription + " >< " + testRunnerResponse.TestRunnerStackTrace + " >");
+                    }
+                    //waiting for the time, as suggested by server, before fetching the results
+                    Thread.Sleep((int)(testRunnerResponse.TimeToWaitBeforeFetchingResults));
+
+                    //fetch results
+                    string testServerGETapiURL = testServerPOSTapiURL + "/" + testRunnerResponse.TestRunInstanceGuid.ToString();
+                    debuggingLog = debuggingLog + "< " + testServerGETapiURL + " >";
+                    debuggingLog = debuggingLog + "< MAX TRY: " + (this.maxRetriesToFetchTestResult).ToString() + " >";
+                    for ( int i = 0; i < this.maxRetriesToFetchTestResult; i++)
+                    {
+                        debuggingLog = debuggingLog + "< TRY: " + (i + 1).ToString() + " >";
+                        testResultResponse = HttpRequestHelper.makeGETRequest( testServerGETapiURL);
+                        using (var streamReader = new StreamReader(testResultResponse.GetResponseStream()))
+                        {
+                            testResultResponseString = streamReader.ReadToEnd();
+                        }
+                        debuggingLog = debuggingLog + "< " + testResultResponseString + " >";
+                        TestResult currTestResult = JsonConvert.DeserializeObject<TestResult>(testResultResponseString);
+                        testResult = currTestResult;
+                        if(currTestResult.Outcome == UnitTestOutcome.InProgress )
+                        {
+                            //waiting for the time, as suggested by server, before fetching the results
+                            Thread.Sleep((int)(testRunnerResponse.TimeToWaitBeforeFetchingResults));
+                            continue;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    testResult.LogOutput = testResult.LogOutput + debuggingLog;
+                }
+                catch( Exception ex)
+                {
+                    testResult.Outcome = UnitTestOutcome.Failed;
+                    testResult.LogError = testResult.LogError + debuggingLog;
+                    testResult.TestFailureException = ex;
+                }
             }
             TestResult[] x = { testResult };
             return x;

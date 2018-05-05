@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service-Fabric-Client-Test-Proj-Demo", "Service-Fabric-Client-Test-Proj-Demo\Service-Fabric-Client-Test-Proj-Demo.csproj", "{CD8B6209-9037-456B-8A23-698490156892}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service-Fabric-Test-Model", "Service-Fabric-Test-Model\Service-Fabric-Test-Model.csproj", "{BB2D2596-4C6C-4A7C-999A-1C7F0C6C8872}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CD8B6209-9037-456B-8A23-698490156892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD8B6209-9037-456B-8A23-698490156892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD8B6209-9037-456B-8A23-698490156892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2D2596-4C6C-4A7C-999A-1C7F0C6C8872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2D2596-4C6C-4A7C-999A-1C7F0C6C8872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2D2596-4C6C-4A7C-999A-1C7F0C6C8872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2D2596-4C6C-4A7C-999A-1C7F0C6C8872}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

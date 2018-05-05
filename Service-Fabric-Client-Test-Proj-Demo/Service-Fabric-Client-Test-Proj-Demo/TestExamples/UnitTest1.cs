@@ -12,7 +12,8 @@ namespace DemoTestCasesNamespace
     //->Only functions having 'TestMethodServiceFabricClient' attribute inside class having 'TestClassServiceFabricClient' attribute will run respective test case on server. Any other scheme of assigning attributes will not run test cases on server side. However, 'TestMethodServiceFabricClient', 'TestClass' pair or 'TestMethod', 'TestClassServiceFabricClient' pair will run tests on client side and have behaviour equivalent of 'TestMethod', 'TestClass'.
     
     //[TestClass]
-    [TestClassServiceFabricClient]
+    [TestClassServiceFabricClient("http://localhost:9031")]
+    //Non-Mandatory field: "testServerURL" represents server where test code will run
     public class DemoTestCases
     {
         [TestMethodServiceFabricClient(3)]
@@ -34,22 +35,25 @@ namespace DemoTestCasesNamespace
         {
             int i = 0;
             Thread.Sleep(1000);
-            throw new Exception("User defined exception");
-            Assert.AreEqual(i, 1);
+            //due to assertion failure or throwing exception these tests are failing on client side itself. So, server side tests are not being run and client side run results are being considered. As, client side example test cases and server side example test cases have similar code. Commenting lines below in this function will not fail tests here, and allow tests to run on server side. In that case server side test case result will be considered. Please comment lines below to demo that scenario.
+            throw new Exception("User defined exception");//comment me as mentioned above to demo different scenario.
+            Assert.AreEqual(i, 1);//comment me as mentioned above to demo different scenario.
         }
 
         [TestMethodServiceFabricClient(5)]
         public void TestMethodFailGetResultAfterThreeRetries()
         {
             int i = 0;
-            Assert.AreEqual(i, 1);
+            //due to assertion failure or throwing exception these tests are failing on client side itself. So, server side tests are not being run and client side run results are being considered. As, client side example test cases and server side example test cases have similar code. Commenting lines below in this function will not fail tests here, and allow tests to run on server side. In that case server side test case result will be considered. Please comment lines below to demo that scenario.
+            Assert.AreEqual(i, 1);//comment me as mentioned above to demo different scenario.
         }
 
         [TestMethodServiceFabricClient(1)]
         public void DemoTestMethodFailAgain()
         {
             int i = 0;
-            Assert.AreEqual(i, 1);
+            //due to assertion failure or throwing exception these tests are failing on client side itself. So, server side tests are not being run and client side run results are being considered. As, client side example test cases and server side example test cases have similar code. Commenting lines below in this function will not fail tests here, and allow tests to run on server side. In that case server side test case result will be considered. Please comment lines below to demo that scenario.
+            Assert.AreEqual(i, 1);//comment me as mentioned above to demo different scenario.
         }
 
         [TestMethodServiceFabricClient()]
