@@ -1,2 +1,2 @@
 # Service-Fabric-Testing-application
-Testing Service Fabric Applications from inside Fabric cluster
+Framework to run Integration Tests and Component Tests inside Service Fabric cluster.
