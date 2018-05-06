@@ -1,2 +1,3 @@
 C:\Users\anbisht\Desktop\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Testing-Application\obj\x64\Debug\Service_Fabric_Testing_Application.sfproj.CoreCompileInputs.cache
 C:\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Testing-Application\obj\x64\Debug\Service_Fabric_Testing_Application.sfproj.CoreCompileInputs.cache
+C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Testing-Application\obj\x64\Debug\Service_Fabric_Testing_Application.sfproj.CoreCompileInputs.cache

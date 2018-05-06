@@ -6,7 +6,7 @@ using System.Net;
 using System.IO;
 using System.Threading;
 
-namespace ServiceFabricTestClientLib
+namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
     public class TestMethodServiceFabricClientAttribute : TestMethodAttribute

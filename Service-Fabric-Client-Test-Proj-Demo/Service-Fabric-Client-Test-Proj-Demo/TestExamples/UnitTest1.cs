@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ServiceFabricTestClientLib;
+using Service_Fabric_Test_Model.ServiceFabricTestClientLib;
 
 
 //-> Class name, namespace name and function name here should exactly match( case-sensitive matching) with Class name, namespace name and function name of test files on server

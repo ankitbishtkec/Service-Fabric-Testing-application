@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ServiceFabricTestClientLib
+namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
 {
     public class HttpRequestHelper
     {

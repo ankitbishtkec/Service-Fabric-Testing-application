@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ServiceFabricTestClientLib
+namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class TestClassServiceFabricClient : TestClassAttribute

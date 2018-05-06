@@ -8557,11 +8557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\github\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service_Fabric_Testing_Web_API\\Service_Fabric_Testing_Web_API.csproj",
+      "projectUniqueName": "C:\\github\\1\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service_Fabric_Testing_Web_API\\Service_Fabric_Testing_Web_API.csproj",
       "projectName": "Service_Fabric_Testing_Web_API",
-      "projectPath": "C:\\github\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service_Fabric_Testing_Web_API\\Service_Fabric_Testing_Web_API.csproj",
+      "projectPath": "C:\\github\\1\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service_Fabric_Testing_Web_API\\Service_Fabric_Testing_Web_API.csproj",
       "packagesPath": "C:\\Users\\anbisht\\.nuget\\packages\\",
-      "outputPath": "C:\\github\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service_Fabric_Testing_Web_API\\obj\\",
+      "outputPath": "C:\\github\\1\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service_Fabric_Testing_Web_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8582,8 +8582,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\github\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service-Fabric-Test-Model\\Service-Fabric-Test-Model.csproj": {
-              "projectPath": "C:\\github\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service-Fabric-Test-Model\\Service-Fabric-Test-Model.csproj"
+            "C:\\github\\1\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service-Fabric-Test-Model\\Service-Fabric-Test-Model.csproj": {
+              "projectPath": "C:\\github\\1\\Service-Fabric-Testing-application\\Service-Fabric-Testing-Application\\Service-Fabric-Test-Model\\Service-Fabric-Test-Model.csproj"
             }
           }
         }
