@@ -4,6 +4,7 @@ A framework to run Integration tests, Component tests, End-to-end tests and Cont
 [Testing Strategies in a Microservice Architecture](https://martinfowler.com/articles/microservice-testing)
 
 This comprises of two part:
+
 1- [Service-Fabric-Testing-Application](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/tree/master/Service-Fabric-Testing-Application "Service-Fabric-Testing-Application") This folder has a stateful service which runs inside the service fabric cluster. This service has responsibility to run every test cases inside a new thread and store the result of it. Test cases code files are contained in this service.
 
 This folder also contains another stateless service which exposes REST API over HTTP which allows client side test project to run test inside fabric cluster and also fetch the result for the run.
@@ -24,11 +25,13 @@ That said, I am firmly located on the side which believes all the Integration te
 
 
 ## How to use?
-1-  Create a Unit Test Project in .net framework in Visual studio 2017.
+1-  Create a Unit Test Project in .NET framework in Visual studio 2017.
 
 2-  Add reference to [Service-Fabric-Test-Model](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/tree/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Test-Model)
 
 3- Add test files containing test cases. Using attributes imported in point 2. Please refer [UnitTest1.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Client-Test-Proj-Demo/TestExamples/UnitTest1.cs "UnitTest1.cs"). It has lot of comments and full explanation. This file will not contain your actual test case. Please refer above mentioned file to know what it can contain ?
+
+3.Optional- Override [ITestRunnerServiceLocator.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Test-Model/ServiceFabricTestClientLib/Interfaces/ITestRunnerServiceLocator.cs "ITestRunnerServiceLocator.cs") to write your custom test runner service locator. It will provide HTTP URL for test runner service. Example: [DemoTestRunnerServiceLocator.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Client-Test-Proj-Demo/TestExamples/TestRunnerServiceLocatorExamples/DemoTestRunnerServiceLocator.cs "DemoTestRunnerServiceLocator.cs")
 
 4- Add test files containing test cases to server side i.e. in test runner stateful service. Using overloaded attributes. Please refer [DemoTestCases.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Testing-Application/Service_Fabric_Test_Runner/TestExamples/DemoTestCases.cs "DemoTestCases.cs"). It has lot of comments and full explanation. This file will contain your actual test case. Please refer above mentioned file to know what it can contain ? This test class name, namespace name and method name should match a corresponding test class name, namespace name and method name on client side.
 
@@ -50,4 +53,4 @@ This call return a time period which tells client to wait for given amount to ti
 If test cases are not being discovered in 'Service-Fabric-Client-Test-Proj-Demo'. Go to Visual Studio 2017 menu Test-> Test Settings -> Default Processor Architecture and change it to x64.
 
 
-#### For complete documentation and features, must read [DemoTestCases.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Testing-Application/Service_Fabric_Test_Runner/TestExamples/DemoTestCases.cs "DemoTestCases.cs") for server test cases and [UnitTest1.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Client-Test-Proj-Demo/TestExamples/UnitTest1.cs "UnitTest1.cs") for corresponding client test cases.
+#### For complete documentation and features, must read [DemoTestCases.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Testing-Application/Service_Fabric_Test_Runner/TestExamples/DemoTestCases.cs "DemoTestCases.cs") for server test cases and [UnitTest1.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Client-Test-Proj-Demo/TestExamples/UnitTest1.cs "UnitTest1.cs") for corresponding client test cases. Optional: [DemoTestRunnerServiceLocator.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Client-Test-Proj-Demo/TestExamples/TestRunnerServiceLocatorExamples/DemoTestRunnerServiceLocator.cs "DemoTestRunnerServiceLocator.cs") example to write your custom test runner service locator. It will provide HTTP URL for test runner service.
