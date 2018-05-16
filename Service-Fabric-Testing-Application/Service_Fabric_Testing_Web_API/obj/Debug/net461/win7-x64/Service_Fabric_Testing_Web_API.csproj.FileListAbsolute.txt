@@ -652,7 +652,6 @@ C:\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\
 C:\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.csproj.CopyComplete
 C:\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.exe
 C:\github\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.pdb
-C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.csprojResolveAssemblyReference.cache
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.exe.config
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.csproj.CoreCompileInputs.cache
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.AssemblyInfoInputs.cache
@@ -977,5 +976,6 @@ C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Applicatio
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\bin\Debug\net461\win7-x64\System.Xml.XPath.dll
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\bin\Debug\net461\win7-x64\System.Xml.XPath.XDocument.dll
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\bin\Debug\net461\win7-x64\Service-Fabric-Test-Model.dll
-C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\bin\Debug\net461\win7-x64\Service-Fabric-Test-Model.pdb
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.csproj.CopyComplete
+C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\obj\Debug\net461\win7-x64\Service_Fabric_Testing_Web_API.csprojAssemblyReference.cache
+C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Testing_Web_API\bin\Debug\net461\win7-x64\Service-Fabric-Test-Model.pdb

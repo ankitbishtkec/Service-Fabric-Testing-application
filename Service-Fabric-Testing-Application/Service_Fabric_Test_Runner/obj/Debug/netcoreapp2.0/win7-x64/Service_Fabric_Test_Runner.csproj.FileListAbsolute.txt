@@ -41,8 +41,6 @@ C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Applicatio
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.dll
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.pdb
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service-Fabric-Test-Model.dll
-C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service-Fabric-Test-Model.pdb
-C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.csprojResolveAssemblyReference.cache
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.csproj.CoreCompileInputs.cache
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.AssemblyInfoInputs.cache
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.AssemblyInfo.cs
@@ -51,3 +49,5 @@ C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Applicatio
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.pdb
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Newtonsoft.Json.dll
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Newtonsoft.Json.xml
+C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\obj\Debug\netcoreapp2.0\win7-x64\Service_Fabric_Test_Runner.csprojAssemblyReference.cache
+C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service_Fabric_Test_Runner\bin\Debug\netcoreapp2.0\win7-x64\Service-Fabric-Test-Model.pdb

@@ -71,4 +71,4 @@ C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Applicatio
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\obj\Debug\Service-Fabric-Test-Model.pdb
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\bin\Debug\Newtonsoft.Json.dll
 C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\bin\Debug\Newtonsoft.Json.xml
-C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\obj\Debug\Service-Fabric-Test-Model.csprojResolveAssemblyReference.cache
+C:\github\1\Service-Fabric-Testing-application\Service-Fabric-Testing-Application\Service-Fabric-Test-Model\obj\Debug\Service-Fabric-Test-Model.csprojAssemblyReference.cache
