@@ -11,9 +11,17 @@ namespace DemoTestCasesNamespace
     //->Functions should have no arguments.
     //->Only functions having 'TestMethodServiceFabricClient' attribute inside class having 'TestClassServiceFabricClient' attribute will run respective test case on server. Any other scheme of assigning attributes will not run test cases on server side.
 
-    //[TestClass]
-    [TestClassServiceFabricClient("http://localhost:9031")]
-    //Non-Mandatory field: "testServerURL" represents server where test code will run
+    //'testRunnerServiceLocatorNamespaceNameDotClassName'-> non mandatory: Namespace name dot Class name which will be used to locate testing service. This class must implement interface 'ITestRunnerServiceLocator'. It is not case-sensitive. If it is not passed or passed as null or passed as empty string, instance of 'DefaultTestRunnerServiceLocator' will be used.
+    [TestClassServiceFabricClient("Service_Fabric_Test_Model.ServiceFabricTestClientLib.DefaultTestRunnerServiceLocator")]
+    //uncomment above attribute, and comment other attributes below to use default test runner service locator 'DefaultTestRunnerServiceLocator'
+
+    //[TestClassServiceFabricClient("Service_Fabric_Client_Test_Proj_Demo.TestExamples.TestRunnerServiceLocatorExamples.DemoTestRunnerServiceLocatoR")]
+    //uncomment above attribute, and comment other attributes below to use custom test runner service locator 'DemoTestRunnerServiceLocator'
+    //Argument provided above is not case sensitive. Check the 'R' at the end of argument string.
+
+
+    //[TestClassServiceFabricClient]
+    //uncomment above attribute, and comment other attributes below to use default test runner service locator 'DefaultTestRunnerServiceLocator'
     public class DemoTestCases
     {
 

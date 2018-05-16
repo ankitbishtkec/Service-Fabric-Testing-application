@@ -28,8 +28,8 @@ namespace DemoTestCasesNamespace
 
         [TestMethodServiceFabric(10000, "preTestMethodPass", "postTestMethodPass")]
         //Non-Mandatory field: "ExpectedExecutionTimeOfTestInMillisecondsIncludingPreTestAndPostTest" must contain expected time this pretest case, test case and post test case all combined will take to complete execution. By default it is 60 seconds.
-        //Non-Mandatory field: "preTestMethod" must contain name of method to run before running actual test case. By default it is empty string.
-        //Non-Mandatory field: "preTestMethod" must contain name of method to run after running actual test case. By default it is empty string.
+        //Non-Mandatory field: "preTestMethod" must contain name of method to run before running actual test case. By default it is empty string. Case-sensitive.
+        //Non-Mandatory field: "postTestMethod" must contain name of method to run after running actual test case. By default it is empty string. Case-sensitive.
         public void TestMethodPass( Guid clientTestClassRunId = new Guid())
         {
             //write your test code here

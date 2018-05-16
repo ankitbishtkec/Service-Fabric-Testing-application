@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.Net;
 using System.IO;
 using System.Threading;
+using Service_Fabric_Test_Model.ServiceFabricTestClientLib.Interfaces;
 
 namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
 {
@@ -13,10 +14,12 @@ namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
     {
         //this represents the maximum number of retries Service Fabric test client should make to fetch 'TestResult' of a test case. We will only make next retry if earlier retry has failed.
         private uint maxRetriesToFetchTestResult = 2;//default is 2 retries
+
         //-> 'testClassRunId' represents the running instance id of test class containing test methods. It will be same for all Test methods run inside a Test class. It can be used to associate different test methods run on server side.
         private Guid testClassRunId = new Guid();
-        //-> represents server where test code will run
-        private string testServerURL = string.Empty;
+
+        //-> represents test Runner Service Locator used in this test method. Default is 'DefaultTestRunnerServiceLocator'.
+        private ITestRunnerServiceLocator testRunnerServiceLocator = new DefaultTestRunnerServiceLocator();
 
         public TestMethodServiceFabricClientAttribute(uint maxRetriesToFetchTestResult = 2)
         {
@@ -42,15 +45,15 @@ namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
             }
         }
 
-        public string TestServerURL
+        public ITestRunnerServiceLocator TestRunnerServiceLocator
         {
             get
             {
-                return this.testServerURL;
+                return this.testRunnerServiceLocator;
             }
             set
             {
-                this.testServerURL = value;
+                this.testRunnerServiceLocator = value;
             }
         }
 
@@ -70,8 +73,11 @@ namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
         public override TestResult[] Execute(ITestMethod testMethod)
         {
             TestResult testResult = null;
-            testResult = testMethod.Invoke(null);
-            if (testResult.Outcome == UnitTestOutcome.Passed && this.testClassRunId != Guid.Empty && this.testServerURL != string.Empty)
+            testResult = new TestResult
+            {
+                Outcome = UnitTestOutcome.Failed
+            };
+            if (this.testClassRunId != Guid.Empty)
             {
                 //request server to run test case
                 TestId testRequestId = new TestId(testMethod.TestClassName, testMethod.TestMethodName, this.testClassRunId);
@@ -81,7 +87,7 @@ namespace Service_Fabric_Test_Model.ServiceFabricTestClientLib
                 string testRunResponseString = string.Empty;
                 string testResultResponseString = string.Empty;
                 string debuggingLog = string.Empty;
-                string testServerPOSTapiURL = this.testServerURL + "/api/testresult";
+                string testServerPOSTapiURL = this.testRunnerServiceLocator.GetTestRunnerServiceHttpURL(testMethod.TestClassName, testMethod.TestMethodName) + "/api/testresult";
                 debuggingLog = debuggingLog + "< " + testServerPOSTapiURL + " >< " + requestBody + " >";
                 try
                 {

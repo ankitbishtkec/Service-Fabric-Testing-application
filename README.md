@@ -46,4 +46,8 @@ This call return a time period which tells client to wait for given amount to ti
 
 2- After, waiting for given amount of time. Client makes another call to fetch the test results, if test results are available it exits else it retries for given amount of time before retrying. The number of maximum retries are configurable by test writer. If test results are still unavailable after configured retries the test is considered to be 'failure'.
 
+### Troubleshooting
+If test cases are not being discovered in 'Service-Fabric-Client-Test-Proj-Demo'. Go to Visual Studio 2017 menu Test-> Test Settings -> Default Processor Architecture and change it to x64.
+
+
 #### For complete documentation and features, must read [DemoTestCases.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Testing-Application/Service_Fabric_Test_Runner/TestExamples/DemoTestCases.cs "DemoTestCases.cs") for server test cases and [UnitTest1.cs](https://github.com/ankitbishtkec/Service-Fabric-Testing-application/blob/master/Service-Fabric-Client-Test-Proj-Demo/Service-Fabric-Client-Test-Proj-Demo/TestExamples/UnitTest1.cs "UnitTest1.cs") for corresponding client test cases.

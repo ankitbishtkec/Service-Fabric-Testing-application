@@ -100,7 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IServiceFabricTestRunner.cs" />
+    <Compile Include="ServiceFabricTestClientLib\DefaultTestRunnerServiceLocator.cs" />
     <Compile Include="ServiceFabricTestClientLib\HttpRequestHelper.cs" />
+    <Compile Include="ServiceFabricTestClientLib\Interfaces\ITestRunnerServiceLocator.cs" />
     <Compile Include="ServiceFabricTestClientLib\TestClassServiceFabricClient.cs" />
     <Compile Include="ServiceFabricTestClientLib\TestMethodServiceFabricClient.cs" />
     <Compile Include="TestId.cs" />

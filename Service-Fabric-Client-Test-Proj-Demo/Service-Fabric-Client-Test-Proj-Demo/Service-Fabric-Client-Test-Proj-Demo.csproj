@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestExamples\TestRunnerServiceLocatorExamples\DemoTestRunnerServiceLocator.cs" />
     <Compile Include="TestExamples\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
