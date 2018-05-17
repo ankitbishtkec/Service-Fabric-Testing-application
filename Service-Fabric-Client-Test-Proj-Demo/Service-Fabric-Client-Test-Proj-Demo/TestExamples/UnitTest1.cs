@@ -52,11 +52,19 @@ namespace DemoTestCasesNamespace
 
         // Use ClassInitialize to run code before running the first test in the class
         [ClassInitialize()]
-        public static void MyClassInitialize(TestContext testContext) {; }
+        public static void MyClassInitialize(TestContext testContext)
+        {
+            ;
+            //'TestInitialize', 'TestCleanup', 'ClassInitialize' and 'ClassCleanup' can be used to deploy and deprovision Test runner service before and after running tests.
+        }
 
         // Use ClassCleanup to run code after all tests in a class have run
         [ClassCleanup()]
-        public static void MyClassCleanup() {; }
+        public static void MyClassCleanup()
+        {
+            ;
+            //'TestInitialize', 'TestCleanup', 'ClassInitialize' and 'ClassCleanup' can be used to deploy and deprovision Test runner service before and after running tests.
+        }
 
         // Use TestInitialize to run code before running each test 
         [TestInitialize()]
@@ -64,6 +72,7 @@ namespace DemoTestCasesNamespace
         {
             string currRunningTestMethod = this.TestContext.TestName;
             //use 'currRunningTestMethod' to run test method specific initialization code before a test method run.
+            //'TestInitialize', 'TestCleanup', 'ClassInitialize' and 'ClassCleanup' can be used to deploy and deprovision Test runner service before and after running tests.
         }
 
         // Use TestCleanup to run code after each test has run
@@ -72,6 +81,7 @@ namespace DemoTestCasesNamespace
         {
             string currRunningTestMethod = this.TestContext.TestName;
             //use 'currRunningTestMethod' to run test method specific cleanup code after a test method run.
+            //'TestInitialize', 'TestCleanup', 'ClassInitialize' and 'ClassCleanup' can be used to deploy and deprovision Test runner service before and after running tests.
 
         }
 
