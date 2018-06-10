@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Service_Fabric_Client_Test_Proj_Demo.TestExamples.TestRunnerServiceLocatorExamples
 {
+    //Implemented ITestRunnerServiceLocator to return a invalid HTTP URL for demo.
     public class DemoTestRunnerServiceLocator : ITestRunnerServiceLocator
     {
         public string GetTestRunnerServiceHttpURL(string namespaceNameDotClassName, string methodName)
